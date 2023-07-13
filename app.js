@@ -5,19 +5,19 @@ let userScore = 0;
 let isReady = prompt('Would you like to play a guessing game?');
 
 if (isReady === 'y' || isReady === 'yes') {
-  alert('Great! First: respond to these questions and statements with \'y\' or \'n\'.');
+  alert('Great! First: respond to these questionsArray and statements with \'y\' or \'n\'.');
 } else {
   alert('Too bad, I love games!');
 }
 
-const questions = [
+const questionsArray = [
   'Do I like JavaScript? (y/n)',
   'Is a JS Array also an Object? (y/n)',
   'There are only 3 immutable data type in JS. (y/n)',
   'JS can run in a web browser. (y/n)',
   'Arrays can only store 1 data type. (y/n)'
 ];
-const answers = [
+const answersArray = [
   'y',
   'y',
   'n',
@@ -25,50 +25,59 @@ const answers = [
   'n'
 ];
 
-let response1 = prompt(questions[0]);
-if (response1.toLowerCase()[0] === answers[0]) {
-  alert('Correct!');
-  userScore++;
-} else {
-  alert('Sorry thats incorrect.');
-}
-alert(`Current score: ${userScore}`);
+function yesOrNo(question, answer){
+  let response = prompt(question);
+  if (response.toLowerCase()[0] === answer) {
+    alert('Correct!');
+    userScore++;
+  } else {
+    alert('Sorry thats incorrect.');
+  }
+  alert(`Current score: ${userScore}`);
 
-let response2 = prompt(questions[1]);
-if (response2.toLowerCase()[0] === answers[1]) {
-  alert('Correct!');
-  userScore++;
-} else {
-  alert('Sorry thats incorrect.');
-}
-alert(`Current score: ${userScore}`);
 
-let response3 = prompt(questions[2]);
-if (response3.toLowerCase()[0] === answers[2]) {
-  alert('Correct!');
-  userScore++;
-} else {
-  alert('Sorry thats incorrect.');
 }
-alert(`Current score: ${userScore}`);
+yesOrNo(questionsArray[0], answersArray[0]);
+yesOrNo(questionsArray[1], answersArray[1]);
+yesOrNo(questionsArray[2], answersArray[2]);
+yesOrNo(questionsArray[3], answersArray[3]);
+yesOrNo(questionsArray[4], answersArray[4]);
 
-let response4 = prompt(questions[3]);
-if (response4.toLowerCase()[3] === answers[3]) {
-  alert('Correct!');
-  userScore++;
-} else {
-  alert('Sorry thats incorrect.');
-}
-alert(`Current score: ${userScore}`);
+// let response2 = prompt(questionsArray[1]);
+// if (response2.toLowerCase()[0] === answersArray[1]) {
+//   alert('Correct!');
+//   userScore++;
+// } else {
+//   alert('Sorry thats incorrect.');
+// }
+// alert(`Current score: ${userScore}`);
 
-let response5 = prompt(questions[4]);
-if (response5.toLowerCase()[0] === answers[4]) {
-  alert('Correct!');
-  userScore++;
-} else {
-  alert('Sorry thats incorrect.');
-}
-alert(`Current score: ${userScore}`);
+// let response3 = prompt(questionsArray[2]);
+// if (response3.toLowerCase()[0] === answersArray[2]) {
+//   alert('Correct!');
+//   userScore++;
+// } else {
+//   alert('Sorry thats incorrect.');
+// }
+// alert(`Current score: ${userScore}`);
+
+// let response4 = prompt(questionsArray[3]);
+// if (response4.toLowerCase()[3] === answersArray[3]) {
+//   alert('Correct!');
+//   userScore++;
+// } else {
+//   alert('Sorry thats incorrect.');
+// }
+// alert(`Current score: ${userScore}`);
+
+// let response5 = prompt(questionsArray[4]);
+// if (response5.toLowerCase()[0] === answersArray[4]) {
+//   alert('Correct!');
+//   userScore++;
+// } else {
+//   alert('Sorry thats incorrect.');
+// }
+// alert(`Current score: ${userScore}`);
 
 let multipleGuessNumber = Math.ceil(Math.random() * 10);
 let response = null;
@@ -95,11 +104,11 @@ while(attempts && !isAnswerCorrect) {
 alert(`Current score: ${userScore}`);
 
 const multipleGuessQuestion = 'What is one of my favorite foods?';
-const multipleGuessAnswers = ['mac and cheese', 'fried chicken', 'ramen', 'pizza', 'gumbo'];
+const multipleGuessanswersArray = ['mac and cheese', 'fried chicken', 'ramen', 'pizza', 'gumbo'];
 
 for (let attempts = 6; attempts > 0; attempts--) {
   let response = prompt(multipleGuessQuestion);
-  if(multipleGuessAnswers.includes(response)) {
+  if(multipleGuessanswersArray.includes(response)) {
     userScore++;
     alert('Correct!');
     break;

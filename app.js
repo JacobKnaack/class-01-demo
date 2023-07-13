@@ -43,42 +43,6 @@ yesOrNo(questionsArray[2], answersArray[2]);
 yesOrNo(questionsArray[3], answersArray[3]);
 yesOrNo(questionsArray[4], answersArray[4]);
 
-// let response2 = prompt(questionsArray[1]);
-// if (response2.toLowerCase()[0] === answersArray[1]) {
-//   alert('Correct!');
-//   userScore++;
-// } else {
-//   alert('Sorry thats incorrect.');
-// }
-// alert(`Current score: ${userScore}`);
-
-// let response3 = prompt(questionsArray[2]);
-// if (response3.toLowerCase()[0] === answersArray[2]) {
-//   alert('Correct!');
-//   userScore++;
-// } else {
-//   alert('Sorry thats incorrect.');
-// }
-// alert(`Current score: ${userScore}`);
-
-// let response4 = prompt(questionsArray[3]);
-// if (response4.toLowerCase()[3] === answersArray[3]) {
-//   alert('Correct!');
-//   userScore++;
-// } else {
-//   alert('Sorry thats incorrect.');
-// }
-// alert(`Current score: ${userScore}`);
-
-// let response5 = prompt(questionsArray[4]);
-// if (response5.toLowerCase()[0] === answersArray[4]) {
-//   alert('Correct!');
-//   userScore++;
-// } else {
-//   alert('Sorry thats incorrect.');
-// }
-// alert(`Current score: ${userScore}`);
-
 let multipleGuessNumber = Math.ceil(Math.random() * 10);
 let response = null;
 let attempts = 6;
